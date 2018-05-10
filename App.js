@@ -1,23 +1,37 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+// In App.js in a new project
 
-export default class App extends React.Component {
+import React from "react";
+import { Button, View, Text } from "react-native";
+import { createStackNavigator } from "react-navigation";
+
+class HomeScreen extends React.Component {
   render() {
-    return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
-      </View>
-    );
+    return <View style={{ flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: "#0B3954" }}>
+        <Button color="#BFD7EA" title="Go to Details" onPress={() => this.props.navigation.navigate("Details")} />
+      </View>;
   }
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+class DetailsScreen extends React.Component {
+  render() {
+    return <View style={{ flex: 1, alignItems: "center", justifyContent: "center", backgroundColor: "#087E8B" }}>
+        <Button color="#BFD7EA" title="Go to Home" onPress={() => this.props.navigation.navigate("Home")} />
+      </View>;
+  }
+}
+
+const RootStack = createStackNavigator(
+  {
+    Home: HomeScreen,
+    Details: DetailsScreen
   },
-});
+  {
+    initialRouteName: "Home"
+  }
+);
+
+export default class App extends React.Component {
+  render() {
+    return <RootStack />;
+  }
+}
