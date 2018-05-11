@@ -1,18 +1,15 @@
-import React, { Component } from 'react';
-import { createStackNavigator } from 'react-navigation';
+import React from 'react';
+import { createStackNavigator } from "react-navigation";
+import GreenScreen from "../screens/greenScreen";
+import BlueScreen from "../screens/blueScreen";
 
-class HomeScreen extends React.Component {
-    render() {
-        return (
-            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-                <Text>Home Screen</Text>
-            </View>
-        );
-    }
-}
-
-export default createStackNavigator({
-    Home: {
-        screen: HomeScreen
+export default AppNavigation = createStackNavigator(
+    {
+        Green: GreenScreen,
+        Blue: BlueScreen
     },
-});
+    {
+        initialRouteName: "Green"
+    }
+);
+
