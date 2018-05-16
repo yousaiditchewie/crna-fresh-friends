@@ -9,7 +9,7 @@ export default class EventsScreen extends React.Component {
           flex: 1,
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "#087E8B"
+          backgroundColor: "#fff"
         }}
       >
         <Button
