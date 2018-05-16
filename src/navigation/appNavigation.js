@@ -1,11 +1,11 @@
 import React from "react";
 import { createStackNavigator } from "react-navigation";
-import EventScreen from "../screens/eventScreen";
+import EventsScreen from "../screens/eventsScreen";
 import BlueScreen from "../screens/blueScreen";
 
 export default (AppNavigation = createStackNavigator(
   {
-    Events: EventScreen,
+    Events: EventsScreen,
     Blue: BlueScreen
   },
   {
