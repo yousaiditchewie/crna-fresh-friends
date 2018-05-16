@@ -14,8 +14,8 @@ export default class BlueScreen extends React.Component {
       >
         <Button
           color="#BFD7EA"
-          title="Go to Green"
-          onPress={() => this.props.navigation.navigate("Green")}
+          title="Go to Events"
+          onPress={() => this.props.navigation.navigate("Events")}
         />
       </View>
     );

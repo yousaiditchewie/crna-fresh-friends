@@ -1,14 +1,14 @@
 import React from "react";
 import { createStackNavigator } from "react-navigation";
-import GreenScreen from "../screens/greenScreen";
+import EventScreen from "../screens/eventScreen";
 import BlueScreen from "../screens/blueScreen";
 
 export default (AppNavigation = createStackNavigator(
   {
-    Green: GreenScreen,
+    Events: EventScreen,
     Blue: BlueScreen
   },
   {
-    initialRouteName: "Green"
+    initialRouteName: "Events"
   }
 ));

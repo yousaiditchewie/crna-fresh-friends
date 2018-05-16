@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Button } from "react-native";
 
-export default class GreenScreen extends React.Component {
+export default class EventScreen extends React.Component {
   render() {
     return (
       <View
